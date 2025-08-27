@@ -1,0 +1,38 @@
+/* --- Global background: light coffee tone --- */
+.bg-coffee { background: #F5EFE6; }  /* warm, subtle; not pure white */
+
+/* --- Card look used across pages --- */
+.card {
+  background: #ffffffcc; /* white with slight transparency for depth on coffee bg */
+  backdrop-filter: saturate(120%) blur(2px);
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+/* Links & buttons to keep a consistent accent */
+.link { color: #2563eb; text-decoration: underline; }
+.btn-primary {
+  display: inline-block; background: #2563eb; color: #fff; padding: .6rem 1rem;
+  border-radius: .5rem; box-shadow: 0 4px 14px rgba(37,99,235,.25);
+}
+.input, .textarea {
+  width: 100%; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem;
+  padding: .6rem .8rem;
+}
+
+/* --- Hero image section (for UB banner etc.) --- */
+/* Put your UB image at static/ub.jpg, or rename the URL below */
+.hero-img {
+  position: relative;
+  background-image: url('/static/ub.jpg'); /* change if you use a different path/name */
+  background-size: cover;
+  background-position: center;
+  min-height: 260px;
+}
+.hero-overlay {
+  position: relative;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
+  width: 100%;
+  height: 100%;
+}
