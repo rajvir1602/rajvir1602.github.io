@@ -15,6 +15,7 @@
   color: #fff;
   padding: .6rem 1rem;
   border-radius: .5rem;
+  box-shadow: 0 4px 14px rgba(37,99,235,.25);
 }
 .btn-outline {
   border: 2px solid #2563eb;
@@ -23,9 +24,21 @@
   border-radius: .5rem;
 }
 
-/* Hero UB image */
+/* Form inputs */
+.input, .textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  padding: .6rem .8rem;
+}
+
+/* Links */
+.link { color: #2563eb; text-decoration: underline; }
+
+/* UB hero image */
 .hero-img {
-  background-image: url('/static/ub.jpg');
+  background-image: url('ub.jpg');  /* relative to static/ when linked as background from now.html */
   background-size: cover;
   background-position: center;
   min-height: 260px;
@@ -34,4 +47,3 @@
   background: rgba(0,0,0,.35);
   width: 100%; height: 100%;
 }
-.link { color: #2563eb; text-decoration: underline; }
