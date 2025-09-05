@@ -110,5 +110,9 @@ body.bg-coffee {
   font-size: .95rem;
 }
 
+/* If you ever link to #sections, keep them from hiding under the sticky nav */
+[id] { scroll-margin-top: 80px; }   /* adjust 80px if your nav is taller */
+
+
 
 
