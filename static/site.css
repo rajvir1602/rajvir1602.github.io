@@ -53,6 +53,8 @@ body.bg-coffee {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 14px;
+  justify-items: center; /* center each badge */
+}
 }
 
 .skill-badge {
