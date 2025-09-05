@@ -104,4 +104,11 @@ body.bg-coffee {
   object-fit: contain;
 }
 
+.skill-badge span {
+  margin-top: 8px;      /* adds breathing room */
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+
 
