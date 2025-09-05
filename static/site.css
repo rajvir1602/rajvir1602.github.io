@@ -73,6 +73,7 @@ body.bg-coffee {
 .skill-icon {
   width: 28px;
   height: 28px;
-  object-fit: contain;
+  flex-shrink: 0;
 }
+
 
