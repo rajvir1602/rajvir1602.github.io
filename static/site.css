@@ -40,10 +40,12 @@ body.bg-coffee {
 
 /* UB hero image (use absolute path to avoid relative issues) */
 .hero-img {
-  background-image: url('/static/ub.jpg');
+  background-image: url('/ub.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 260px;
+  background-repeat: no-repeat;
+  min-height: 24rem;
+  position: relative;
 }
 .hero-overlay { background: rgba(0,0,0,.35); width: 100%; height: 100%; }
 
@@ -116,15 +118,6 @@ body.bg-coffee {
 /* site.css */
 .bg-coffee-solid { background-color: #f5efe6; }  /* use your coffee hex */
 
-
-.hero-img {
-  background-image: url('/static/ub.jpg');  /* Put your UB image here */
-  background-size: cover;
-  background-position: center;
-  min-height: 360px;
-  position: relative;
-}
-
 .hero-overlay {
   background: rgba(0, 0, 0, 0.45); /* darken photo for readable text */
   width: 100%;
@@ -138,7 +131,10 @@ body.bg-coffee {
   padding: 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,.08);
 }
-
+.hero-img .coffee-tint {
+  background: rgba(245, 239, 230, 0.35);  /* #f5efe6 with alpha */
+  mix-blend-mode: multiply;               /* subtle theme tint */
+}
 
 
 
