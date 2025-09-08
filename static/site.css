@@ -22,7 +22,7 @@ body.bg-coffee { background-color: #F5EFE6 !important; }
 
 /* ---------- Hero (UB) ---------- */
 .hero-img {
-  background-image: url('/static/ub.jpg'); /* FIXED PATH */
+  background-image: url('static/ub.jpg'); /* removed leading slash */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
