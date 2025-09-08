@@ -1,93 +1,62 @@
-/* Force the coffee background site-wide */
-body.bg-coffee {
-  background-color: #F5EFE6 !important; /* higher specificity + override */
-}
+/* ---------- Base ---------- */
+body.bg-coffee { background-color: #F5EFE6 !important; }
 
-/* Card look */
-.card {
-  background: #ffffffcc;
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,.06);
-}
+.bg-coffee-solid { background-color: #F5EFE6; }
 
-/* Buttons */
+/* Links + Buttons + Inputs */
+.link { color: #2563eb; text-decoration: underline; }
+
 .btn-primary {
-  background: #2563eb;
-  color: #fff;
-  padding: .6rem 1rem;
-  border-radius: .5rem;
+  background: #2563eb; color: #fff;
+  padding: .6rem 1rem; border-radius: .5rem;
   box-shadow: 0 4px 14px rgba(37,99,235,.25);
 }
 .btn-outline {
-  border: 2px solid #2563eb;
-  color: #2563eb;
-  padding: .6rem 1rem;
-  border-radius: .5rem;
+  border: 2px solid #2563eb; color: #2563eb;
+  padding: .6rem 1rem; border-radius: .5rem;
 }
-
-/* Form inputs */
 .input, .textarea {
-  width: 100%;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: .5rem;
-  padding: .6rem .8rem;
+  width: 100%; background: #fff; border: 1px solid #e5e7eb;
+  border-radius: .5rem; padding: .6rem .8rem;
 }
 
-/* Links */
-.link { color: #2563eb; text-decoration: underline; }
-
-/* UB hero image (use absolute path to avoid relative issues) */
+/* ---------- Hero (UB) ---------- */
 .hero-img {
-  background-image: url('/ub.jpg');
+  background-image: url('/static/ub.jpg'); /* FIXED PATH */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 24rem;
   position: relative;
 }
-.hero-overlay { background: rgba(0,0,0,.35); width: 100%; height: 100%; }
-
-
-/* --- Skills grid --- */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 14px;
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45); /* darken photo for readable text */
+  width: 100%; height: 100%;
 }
+/* Optional coffee tint (instead of dark) */
+/*
+.hero-img .coffee-tint {
+  background: rgba(245,239,230,0.35);
+  mix-blend-mode: multiply;
 }
+*/
 
-.skill-badge {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* ---------- Cards ---------- */
+.card {
   background: #fff;
-  border-radius: 14px;
-  padding: 10px 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.06);
-  transition: transform .08s ease, box-shadow .15s ease;
-}
-.skill-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
 }
 
-.skill-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-}
-
-/* Center the logo block and keep tiles consistent */
+/* ---------- Skills Grid ---------- */
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 160px)); /* fixed tile width */
   gap: 20px 28px;
-  justify-content: center;     /* centers the whole grid */
-  justify-items: center;       /* centers each tile */
+  justify-content: center;   /* centers the whole grid */
+  justify-items: center;     /* centers each tile */
 }
-
 .skill-badge {
   display: flex;
   flex-direction: column;
@@ -97,46 +66,19 @@ body.bg-coffee {
   border-radius: 14px;
   padding: 14px 16px;
   box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  transition: transform .08s ease, box-shadow .15s ease;
 }
-
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
 .skill-badge svg,
 .skill-badge img {
-  width: 72px;   /* keep logos visually even */
-  height: 72px;
-  object-fit: contain;
+  width: 72px; height: 72px; object-fit: contain;
 }
-
 .skill-badge span {
-  margin-top: 8px;      /* adds breathing room */
-  font-weight: 600;
-  font-size: .95rem;
+  margin-top: 8px; font-weight: 600; font-size: .95rem;
 }
 
-/* If you ever link to #sections, keep them from hiding under the sticky nav */
-[id] { scroll-margin-top: 80px; }   /* adjust 80px if your nav is taller */
-
-/* site.css */
-.bg-coffee-solid { background-color: #f5efe6; }  /* use your coffee hex */
-
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.45); /* darken photo for readable text */
-  width: 100%;
-  height: 100%;
-}
-
-/* Card style */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,.08);
-}
-.hero-img .coffee-tint {
-  background: rgba(245, 239, 230, 0.35);  /* #f5efe6 with alpha */
-  mix-blend-mode: multiply;               /* subtle theme tint */
-}
-
-
-
-
-
+/* Anchor targets won’t hide under sticky nav */
+[id] { scroll-margin-top: 80px; }
