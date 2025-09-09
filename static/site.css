@@ -1,47 +1,35 @@
-/* ---------- Base ---------- */
-body.bg-coffee { background-color: #F5EFE6 !important; }
-
-.bg-coffee-solid { background-color: #F5EFE6; }
-
-/* Links + Buttons + Inputs */
-.link { color: #2563eb; text-decoration: underline; }
-
-.btn-primary {
-  background: #2563eb; color: #fff;
-  padding: .6rem 1rem; border-radius: .5rem;
-  box-shadow: 0 4px 14px rgba(37,99,235,.25);
-}
-.btn-outline {
-  border: 2px solid #2563eb; color: #2563eb;
-  padding: .6rem 1rem; border-radius: .5rem;
-}
-.input, .textarea {
-  width: 100%; background: #fff; border: 1px solid #e5e7eb;
-  border-radius: .5rem; padding: .6rem .8rem;
+/* Force the coffee background site-wide */
+body.bg-coffee {
+  background-color: #F5EFE6 !important;
 }
 
-/* ---------- Hero (UB) ---------- */
+/* Sticky nav offset */
+:root { --nav-h: 65px; }
+.with-sticky { padding-top: var(--nav-h); }
+
+/* Nav bg */
+.bg-coffee-solid { background-color: #f5efe6; }
+
+/* Hero image */
 .hero-img {
-  background-image: url('static/ub.jpg'); /* removed leading slash */
+  background-image: url('/static/ub.jpg');  /* put ub.jpg in /static */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 24rem;
+  min-height: 18rem;
   position: relative;
 }
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.45); /* darken photo for readable text */
-  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
 }
-/* Optional coffee tint (instead of dark) */
-/*
 .hero-img .coffee-tint {
-  background: rgba(245,239,230,0.35);
+  background: rgba(245, 239, 230, 0.35);
   mix-blend-mode: multiply;
 }
-*/
 
-/* ---------- Cards ---------- */
+/* Card look */
 .card {
   background: #fff;
   border-radius: 12px;
@@ -49,14 +37,40 @@ body.bg-coffee { background-color: #F5EFE6 !important; }
   box-shadow: 0 4px 16px rgba(0,0,0,.08);
 }
 
-/* ---------- Skills Grid ---------- */
+/* Buttons */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 14px rgba(37,99,235,.25);
+}
+.btn-outline {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+}
+
+/* Form inputs */
+.input, .textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  padding: .6rem .8rem;
+}
+
+/* Links */
+.link { color: #2563eb; text-decoration: underline; }
+
+/* --- Skills grid --- */
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 160px)); /* fixed tile width */
-  gap: 20px 28px;
-  justify-content: center;   /* centers the whole grid */
-  justify-items: center;     /* centers each tile */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
 }
+
 .skill-badge {
   display: flex;
   flex-direction: column;
@@ -72,13 +86,27 @@ body.bg-coffee { background-color: #F5EFE6 !important; }
   transform: translateY(-2px);
   box-shadow: 0 10px 22px rgba(0,0,0,.08);
 }
+
 .skill-badge svg,
 .skill-badge img {
-  width: 72px; height: 72px; object-fit: contain;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
 }
 .skill-badge span {
-  margin-top: 8px; font-weight: 600; font-size: .95rem;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: .95rem;
 }
 
-/* Anchor targets won’t hide under sticky nav */
+/* Center the logo block and keep tiles consistent */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
+  gap: 20px 28px;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Prevent sticky nav overlap on anchor jumps */
 [id] { scroll-margin-top: 80px; }
