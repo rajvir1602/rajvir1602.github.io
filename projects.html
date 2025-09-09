@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work & Projects | Rajvir Singh</title>
 
-  <!-- Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-  <!-- Theme -->
   <link href="/static/site.css?v=2025-09-08" rel="stylesheet"/>
 </head>
-<body class="bg-coffee text-gray-900 font-sans">
+<body class="bg-coffee text-gray-900 font-sans with-sticky">
 
-  <!-- Nav (kept consistent) -->
+  <!-- Nav -->
   <nav class="sticky top-0 z-[9999] bg-coffee-solid border-b border-black/10 p-4 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center">
         <a href="index.html" class="text-2xl font-semibold">Rajvir Singh</a>
-        <a href="https://github.com/rajvir1602" class="ml-2" aria-label="GitHub" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/rajvir13/" class="ml-2" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+        <a href="https://github.com/rajvir1602" class="ml-2" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/rajvir13/" class="ml-2" target="_blank">LinkedIn</a>
       </div>
       <div>
         <a href="projects.html" class="mx-2 font-semibold">Work</a>
@@ -29,52 +27,71 @@
     </div>
   </nav>
 
-  <!-- Page header -->
-  <header class="relative flex items-center justify-center py-12 border-b border-black/10 bg-coffee-solid">
-    <div class="text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold">Work Experience</h1>
-      <p class="mt-3 text-lg text-gray-700 max-w-3xl">
-        Building reliable backends, CI/CD, and clean UIs. Here’s the condensed story — then a couple of projects below.
+  <!-- Header -->
+  <header class="bg-coffee-solid border-b border-black/10 py-10">
+    <div class="container mx-auto max-w-4xl text-center px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Work & Projects</h1>
+      <p class="mt-3 text-lg text-gray-700">
+        3 years shipping backends, CI/CD, and clean UIs. Highlights below.
       </p>
+      <div class="mt-4 flex gap-2 justify-center flex-wrap">
+        <span class="chip">3 YOE</span>
+        <span class="chip">Java</span>
+        <span class="chip">Spring Boot</span>
+        <span class="chip">React</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Terraform</span>
+        <span class="chip">GitHub Actions</span>
+      </div>
     </div>
   </header>
 
-  <!-- Work timeline -->
-  <main class="container mx-auto px-6 py-12 max-w-5xl space-y-12">
+  <main class="container mx-auto px-6 py-10 max-w-5xl space-y-12">
 
-    <section aria-labelledby="work">
+    <!-- Work (timeline cards) -->
+    <section>
       <ol class="timeline space-y-8">
+
         <!-- Fastr -->
         <li class="timeline-item card">
           <div class="flex items-start">
-            <!-- company logo placeholder; replace src when ready -->
             <div class="logo-square mr-4">
-              <!-- optional <img src="/static/fastr.png" alt="Fastr logo" class="w-full h-full object-contain"> -->
+              <!-- <img src="/static/fastr.png" alt="Fastr" class="w-full h-full object-contain"> -->
               <span class="text-xs text-gray-500">Logo</span>
             </div>
-
             <div class="flex-1">
-              <div class="flex flex-wrap items-baseline justify-between">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 class="text-2xl font-bold">Software Engineer — Fastr</h3>
                 <span class="text-sm text-gray-600">Boston, MA · 2023–2024</span>
               </div>
-              <p class="mt-1 text-gray-700">Startup environment; dashboards, CI/CD, and platform reliability.</p>
+              <p class="mt-1 text-gray-700">Startup pace: platform reliability, dashboards, and CI/CD.</p>
+
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="card">
+                  <p class="text-sm text-gray-500">Adoption</p>
+                  <p class="text-xl font-semibold">40+ teams</p>
+                </div>
+                <div class="card">
+                  <p class="text-sm text-gray-500">Pipelines</p>
+                  <p class="text-xl font-semibold">GoCD → GHA</p>
+                </div>
+                <div class="card">
+                  <p class="text-sm text-gray-500">Infra</p>
+                  <p class="text-xl font-semibold">Terraform IaC</p>
+                </div>
+              </div>
 
               <ul class="mt-4 list-disc pl-5 space-y-2">
-                <li>Built a <strong>Python + Robot Framework</strong> test automation platform adopted by <strong>40+ teams</strong>; integrated with <strong>Sumo Logic</strong>, <strong>GoCD</strong>, and <strong>GitHub Actions</strong> for traceable pipelines.</li>
-                <li>Partnered with DevOps to migrate services to <strong>Infrastructure as Code</strong> using <strong>Terraform</strong> + GitHub Actions; reduced deployment toil and made rollbacks predictable.</li>
-                <li>Shipped customer-facing dashboards and internal tools (React + REST) used by support/ops to monitor health in real time.</li>
+                <li>Built a <strong>Python + Robot Framework</strong> test platform integrated with <strong>Sumo Logic</strong>, <strong>GoCD</strong>, and <strong>GitHub Actions</strong> for traceable pipelines.</li>
+                <li>Migrated services to <strong>Terraform</strong> with GHA; faster, safer deploys and clean rollbacks.</li>
+                <li>Shipped React dashboards + internal tools for live health monitoring.</li>
               </ul>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="chip">Python</span>
-                <span class="chip">Robot Framework</span>
-                <span class="chip">GoCD</span>
-                <span class="chip">GitHub Actions</span>
-                <span class="chip">Terraform</span>
-                <span class="chip">React</span>
-                <span class="chip">Docker</span>
-                <span class="chip">AWS</span>
+                <span class="chip">Python</span><span class="chip">Robot Framework</span>
+                <span class="chip">GoCD</span><span class="chip">GitHub Actions</span>
+                <span class="chip">Terraform</span><span class="chip">React</span>
+                <span class="chip">Docker</span><span class="chip">AWS</span>
               </div>
             </div>
           </div>
@@ -84,83 +101,84 @@
         <li class="timeline-item card">
           <div class="flex items-start">
             <div class="logo-square mr-4">
-              <!-- <img src="/static/cvent.png" alt="Cvent logo" class="w-full h-full object-contain"> -->
+              <!-- <img src="/static/cvent.png" alt="Cvent" class="w-full h-full object-contain"> -->
               <span class="text-xs text-gray-500">Logo</span>
             </div>
-
             <div class="flex-1">
-              <div class="flex flex-wrap items-baseline justify-between">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 class="text-2xl font-bold">Software Engineer — Cvent</h3>
                 <span class="text-sm text-gray-600">2022–2023</span>
               </div>
               <p class="mt-1 text-gray-700">Product engineering with a bias for shipping and scale.</p>
 
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="card">
+                  <p class="text-sm text-gray-500">Stack</p>
+                  <p class="text-xl font-semibold">Java / Spring</p>
+                </div>
+                <div class="card">
+                  <p class="text-sm text-gray-500">Delivery</p>
+                  <p class="text-xl font-semibold">Docker + CI</p>
+                </div>
+                <div class="card">
+                  <p class="text-sm text-gray-500">DB</p>
+                  <p class="text-xl font-semibold">PostgreSQL</p>
+                </div>
+              </div>
+
               <ul class="mt-4 list-disc pl-5 space-y-2">
-                <li>Delivered microservices and APIs in <strong>Java / Spring Boot</strong>; focused on reliability, clear contracts, and simple observability.</li>
-                <li>Contributed to CI/CD improvements (<strong>Docker</strong>, test pyramids, parallelization) to cut feedback times for dev teams.</li>
-                <li>Collaborated cross-functionally with QA/PM to turn fuzzy product asks into small, demo-able increments.</li>
+                <li>Delivered microservices/APIs in <strong>Java / Spring Boot</strong> with clean contracts + observability.</li>
+                <li>Improved CI/CD (Docker, test pyramids, parallelization) to shrink feedback loops.</li>
+                <li>Worked cross-functionally to break down features into demo-able increments.</li>
               </ul>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="chip">Java</span>
-                <span class="chip">Spring Boot</span>
-                <span class="chip">REST</span>
-                <span class="chip">Docker</span>
-                <span class="chip">PostgreSQL</span>
-                <span class="chip">Jenkins/GitHub Actions</span>
+                <span class="chip">Java</span><span class="chip">Spring Boot</span>
+                <span class="chip">REST</span><span class="chip">Docker</span>
+                <span class="chip">PostgreSQL</span><span class="chip">Jenkins/GHA</span>
               </div>
             </div>
           </div>
         </li>
+
       </ol>
     </section>
 
     <!-- Projects -->
-    <section aria-labelledby="projects">
+    <section>
       <div class="flex items-baseline justify-between">
         <h2 class="text-3xl font-semibold">Selected Projects</h2>
-        <!-- optional repo link -->
-        <!-- <a href="https://github.com/rajvir1602" target="_blank" class="link">All repos →</a> -->
       </div>
 
       <div class="mt-6 grid gap-6 md:grid-cols-2">
-        <!-- Project 1 -->
         <article class="card">
           <h3 class="text-xl font-bold">“Deploy-Ready” Test Runner</h3>
           <p class="mt-1 text-gray-700">
-            A containerized test-runner (Python/Robot) that plugs into any pipeline, pushes logs/metrics to Sumo, and
-            posts pass/fail summaries on PRs. One-command local runs mirror CI.
+            Containerized runner (Python/Robot) plugs into any pipeline, streams logs to Sumo, and posts PR summaries.
+            Local runs mirror CI.
           </p>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">Python</span>
-            <span class="chip">Robot Framework</span>
-            <span class="chip">Docker</span>
-            <span class="chip">GitHub Actions</span>
+            <span class="chip">Python</span><span class="chip">Robot</span>
+            <span class="chip">Docker</span><span class="chip">GitHub Actions</span>
             <span class="chip">Sumo Logic</span>
           </div>
-          <!-- <a class="btn-outline inline-block mt-4" href="https://github.com/rajvir1602/your-repo" target="_blank">View Code</a> -->
         </article>
 
-        <!-- Project 2 -->
         <article class="card">
           <h3 class="text-xl font-bold">Service Health Dashboard</h3>
           <p class="mt-1 text-gray-700">
-            Lightweight React UI that aggregates service status, error rates, and deployment history with deep links to logs.
-            Designed to be zero-config per service via tags.
+            React UI aggregating status, error rates, and deploy history with deep links to logs. Zero-config per service via tags.
           </p>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">React</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">GraphQL/REST</span>
-            <span class="chip">PostgreSQL</span>
+            <span class="chip">React</span><span class="chip">TypeScript</span>
+            <span class="chip">GraphQL/REST</span><span class="chip">PostgreSQL</span>
           </div>
-          <!-- <a class="btn-outline inline-block mt-4" href="#" target="_blank">Demo</a> -->
         </article>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="text-center pt-6">
+    <section class="text-center pt-4">
       <a class="btn-primary inline-block" href="resume.pdf" target="_blank">View Resume</a>
       <a class="btn-outline inline-block ml-3" href="contact.html">Contact Me</a>
     </section>
