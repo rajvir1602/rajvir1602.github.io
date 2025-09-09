@@ -1,69 +1,35 @@
-/* --- Work & Projects polish --- */
-.timeline { border-left: 3px solid rgba(0,0,0,.06); padding-left: 0.75rem; }
-.timeline-item { position: relative; }
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -1.05rem;
-  top: 1rem;
-  width: 10px; height: 10px;
-  background: #2563eb; border-radius: 9999px;
-  box-shadow: 0 0 0 4px rgba(37,99,235,.15);
-}
+/* ===== THEME BASELINE (safe across all pages) ===== */
 
-.logo-square {
-  width: 56px; height: 56px;
-  border-radius: 12px;
-  background: #fff;
-  display: grid; place-items: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,.06);
-}
-
-/* compact, reusable skill/tech chips */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  font-size: .8rem;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,.06);
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
-}
-
-/* =========================
-   HOTFIX — theme + buttons + cards
-   (Place at END of static/site.css)
-   ========================= */
-
-/* Keep coffee everywhere */
-body.bg-coffee,
+/* Coffee background everywhere */
+body.bg-coffee { background-color: #F5EFE6 !important; }
 .bg-coffee-solid { background-color: #F5EFE6 !important; }
 
-/* Cards: soft, not bright white */
+/* Sticky nav offset helper (only if you add .with-sticky on <body>) */
+:root { --nav-h: 65px; }
+.with-sticky { padding-top: var(--nav-h); }
+
+/* Cards */
 .card {
   background: rgba(255,255,255,0.9);
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 12px;
-  padding: 18px 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.06);
-  backdrop-filter: saturate(110%) blur(2px);
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
 }
 
-/* Buttons back to bold */
+/* Buttons */
 .btn-primary {
   background: #2563eb;
   color: #fff;
   padding: .6rem 1rem;
   border-radius: .5rem;
-  box-shadow: 0 6px 18px rgba(37,99,235,.28);
+  box-shadow: 0 4px 14px rgba(37,99,235,.25);
   transition: transform .06s ease, box-shadow .12s ease;
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(37,99,235,.32);
+  box-shadow: 0 8px 22px rgba(37,99,235,.30);
 }
-
 .btn-outline {
   border: 2px solid #2563eb;
   color: #2563eb;
@@ -73,7 +39,64 @@ body.bg-coffee,
 }
 .btn-outline:hover { background: #2563eb; color: #fff; }
 
-/* Chips (tech tags) */
+/* Forms */
+.input, .textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  padding: .6rem .8rem;
+}
+
+/* Links */
+.link { color: #2563eb; text-decoration: underline; }
+
+/* Plain hero (no background image) */
+.hero-plain {
+  background: #F5EFE6;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+/* Prevent anchors from hiding under sticky nav */
+[id] { scroll-margin-top: 80px; }
+
+/* ===== SKILLS GRID (used only by skills.html) ===== */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
+  gap: 20px 28px;
+  justify-content: center;     /* center the whole grid */
+  justify-items: center;       /* center each tile */
+}
+
+.skill-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  transition: transform .08s ease, box-shadow .15s ease;
+}
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+.skill-badge svg,
+.skill-badge img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+.skill-badge span {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+/* Optional: small pill tags used on projects/work */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -85,7 +108,7 @@ body.bg-coffee,
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
-/* Timeline dots */
+/* Optional: simple timeline rail if you use it */
 .timeline { border-left: 3px solid rgba(0,0,0,.08); padding-left: 0.75rem; }
 .timeline-item { position: relative; }
 .timeline-item::before {
@@ -98,7 +121,7 @@ body.bg-coffee,
   box-shadow: 0 0 0 4px rgba(37,99,235,.15);
 }
 
-/* Logo box */
+/* Small square for company logos (optional) */
 .logo-square {
   width: 56px; height: 56px;
   border-radius: 12px;
