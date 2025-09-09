@@ -10,13 +10,11 @@ body.bg-coffee {
 /* Nav bg */
 .bg-coffee-solid { background-color: #f5efe6; }
 
-/* Hero image */
+/* Hero banner plain (no UB image) */
+/* Hero banner plain (no UB image) */
 .hero-img {
-  background-image: url('/static/ub.jpg');  /* put ub.jpg in /static */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 18rem;
+  background: #f5efe6;  /* just keep coffee tone */
+  min-height: 15rem;
   position: relative;
 }
 .hero-overlay {
