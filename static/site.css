@@ -5,7 +5,7 @@ body.bg-coffee {
 
 /* Sticky nav offset */
 :root { --nav-h: 65px; }
-.with-sticky { padding-top: var(--nav-h); }
+/* .with-sticky { padding-top: var(--nav-h); } */
 
 /* Nav bg */
 .bg-coffee-solid { background-color: #f5efe6; }
