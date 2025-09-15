@@ -162,37 +162,45 @@
     </section>
 
     <!-- Projects -->
-    <section>
-      <div class="flex items-baseline justify-between">
-        <h2 class="text-3xl font-semibold"> Hands on Projects</h2>
-      </div>
+   
+<section>
+  <div class="flex items-baseline justify-between">
+    <h2 class="text-3xl font-semibold"> Hands-on Projects</h2>
+  </div>
 
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        <article class="card">
-          <h3 class="text-xl font-bold">“Deploy-Ready” Test Runner</h3>
-          <p class="mt-1 text-gray-700">
-            Containerized runner (Python/Robot) plugs into any pipeline, streams logs to Sumo, and posts PR summaries.
-            Local runs mirror CI.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">Python</span><span class="chip">Robot</span>
-            <span class="chip">Docker</span><span class="chip">GitHub Actions</span>
-            <span class="chip">Sumo Logic</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 class="text-xl font-bold">Service Health Dashboard</h3>
-          <p class="mt-1 text-gray-700">
-            React UI aggregating status, error rates, and deploy history with deep links to logs. Zero-config per service via tags.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">React</span><span class="chip">TypeScript</span>
-            <span class="chip">GraphQL/REST</span><span class="chip">PostgreSQL</span>
-          </div>
-        </article>
+  <div class="mt-6 grid gap-6 md:grid-cols-2">
+    <!-- Project 1: Recipe Finder -->
+    <article class="card">
+      <h3 class="text-xl font-bold">Recipe Finder Web App</h3>
+      <p class="mt-1 text-gray-700">
+        A single-page <strong>React + TypeScript</strong> app to search recipes via a public API.  
+        Implemented <strong>pagination</strong> for efficient API usage and used <strong>React hooks + state</strong> 
+        to manage updates. Provided smooth user experience for keyword-based search.
+      </p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="chip">React</span><span class="chip">TypeScript</span>
+        <span class="chip">REST API</span><span class="chip">Pagination</span>
       </div>
-    </section>
+    </article>
+
+    <!-- Project 2: LULC -->
+    <article class="card">
+      <h3 class="text-xl font-bold">Land Use / Land Cover Classification</h3>
+      <p class="mt-1 text-gray-700">
+        Bachelor’s final year project analyzing <strong>urban sprawl in Delhi</strong> using 
+        <strong>Landsat-7 satellite imagery</strong> on Google Earth Engine.  
+        Applied <strong>Random Forests, SVM, and Decision Trees</strong> for pixel-based classification 
+        of Built-up vs Non-Built-up areas, achieving ~66% accuracy with cross-validation.
+      </p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="chip">Python</span><span class="chip">Google Earth Engine</span>
+        <span class="chip">Machine Learning</span><span class="chip">Remote Sensing</span>
+        <span class="chip">Random Forests</span>
+      </div>
+    </article>
+  </div>
+</section>
+
   </main>
   </div>
 </body>
